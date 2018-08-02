@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"math/rand"
+	"os"
 	"runtime"
 	"sync"
 	"time"
@@ -18,6 +19,11 @@ func main() {
 	startTime := flag.Int("min", 30, "min duration for eatng morsel")
 	stopTime := flag.Int("max", 180, "max duration for eatng morsel")
 	flag.Parse()
+
+	if *startTime >= *stopTime {
+		fmt.Println("Wrong params ... exit")
+		os.Exit(1)
+	}
 
 	rand.Seed(time.Now().UnixNano())
 	runtime.GOMAXPROCS(runtime.NumCPU())
