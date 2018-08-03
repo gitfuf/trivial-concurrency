@@ -8,6 +8,7 @@ They eat leisurely, spending between 30 seconds and 3 minutes eating each morsel
 
 ### Output:
 
+```
 Bon appétit!
 Alice is enjoying some chorizo
 Bob is enjoying some chopitos
@@ -45,7 +46,7 @@ Alice is enjoying some patatas bravas
 Bob is enjoying some patatas bravas
 Dave is enjoying some patatas bravas
 That was delicious!
-
+```
 ### Run app
 
 For setup can use next flags:
