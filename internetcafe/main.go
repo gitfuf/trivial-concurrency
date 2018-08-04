@@ -49,7 +49,7 @@ func main() {
 					dur := randInt(*minT, *maxT)
 					time.Sleep(time.Duration(dur) * time.Second)
 					fmt.Printf("Tourist %d is done, having spent %d seconds online.\n", client.name, dur)
-					close(client.finishC)
+					client.finishC <- struct{}{}
 				}
 			}
 		}(i)
